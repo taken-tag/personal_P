@@ -1,0 +1,127 @@
+@import './global.scss';
+
+.intro{
+    background: linear-gradient(rgb(255, 255, 255), rgb(169, 203, 235));
+    display: flex;
+
+    @include mobile{
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .left{
+      flex: 0.5;
+      overflow: hidden;
+
+    .image_container{
+        width: 700px;
+        height: 700px;
+        background:  linear-gradient(white, rgb(123, 153, 165));
+        border-radius: 50%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        float: right;
+        object-fit: contain;
+
+        @include mobile{
+          align-items: flex-start;
+        }
+
+        img{
+         height: 100%;
+         object-fit: contain;
+
+         @include mobile{
+           height: 50%;
+         }
+        }
+    }
+
+
+    }
+    .right{
+      flex: 0.5;
+      position: relative;
+
+     .wrapper{
+       height: 100%;
+       width: 100%;
+       padding-left: 50px ;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+      
+       @include mobile{
+         padding-left: 0px;
+         align-items: center;
+       }
+
+       h1{
+         font-size: 60px;
+         margin: 10px 0px;
+         letter-spacing: 2px;
+         color: rgb(99, 98, 98);
+
+        @include mobile{
+          font-size: 40px;
+        }
+
+       }
+       h2{
+         font-size: 35px;
+         letter-spacing: 2px;
+         color: rgb(99, 98, 98);
+
+       }
+       h3{
+         font-size: 30px;
+         letter-spacing: 2px;
+         margin-left: 8px;
+         color: rgb(99, 98, 98);
+         
+         @include mobile{
+          font-size: 20px;
+        }
+
+         span{
+           font-size: 30px;
+           color: rgb(67, 82, 122);
+
+         }
+
+         .ityped-cursor{
+          animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+          50%{
+            opacity: 1;
+          }
+          100%{
+            opacity: 0;
+          }
+        }
+       }
+      } 
+
+       a{
+         position: absolute;
+         bottom: 10px;
+         left: 40%;
+
+         img{
+           width: 30px;
+           animation: arrowblink 2s infinite;
+         }
+
+         @keyframes arrowblink {
+           100%{
+             opacity: 0;
+           }
+         }
+       }
+     
+
+    }
+}
